@@ -6,14 +6,26 @@ var init = function() {
 
 
 
-var intervals = ["Prime", "Sekunde", "kleine Terz", "große Terz", "Quarte", "Quinte", "Sexte", "Septime", "Oktave"];
+var intervalName = ["PRIME", "SEKUNDE", "TERZ", "QUARTE", "Quinte", "Sexte", "Septime", "Oktave"];
+var intervalQuestion = ["c' nach c'", "c' nach d'", "c' nach e'", "c' nach f'", "c' nach g'", "c' nach a'", "c' nach h'", "c' nach c''"];
 
 
-var userAnswer = prompt("Nenne das Intervall von c' nach c'");
 
-	if (userAnswer === "Prime") {
-		console.log("Richtig, es ist die Prime");
+for (var i = 0; i < intervalQuestion.length; i++) {
+	console.log(intervalQuestion[i]);
+	console.log(intervalName[i]);
+	
+	var userAnswer = prompt("Nenne das Intervall von " + intervalQuestion[i]).toUpperCase();
+	
+	
+	if (userAnswer === intervalName[i]) {
+		alert("Das ist richtig.");
 	}
 	else {
-		console.log ("Das ist leider nicht richtig. Versuchen Sie es noch einmal.");
+		alert("Das ist falsch.");
 	}
+}
+	
+	
+	
+	
