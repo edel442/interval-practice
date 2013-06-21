@@ -6,7 +6,7 @@ var init = function() {
 
 
 
-var intervalName = ["PRIME", "SEKUNDE", "TERZ", "QUARTE", "Quinte", "Sexte", "Septime", "Oktave"];
+var intervalName = ["PRIME", "SEKUNDE", "TERZ", "QUARTE", "QUINTE", "SEXTE", "SEPTIME", "OKTAVE"];
 var intervalQuestion = ["c' nach c'", "c' nach d'", "c' nach e'", "c' nach f'", "c' nach g'", "c' nach a'", "c' nach h'", "c' nach c''"];
 
 
