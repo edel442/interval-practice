@@ -7,26 +7,60 @@
 <link href="css/bootstrap.css" rel="stylesheet" />
 <link href="css/bootstrap-responsive.css" rel="stylesheet" />
 <link href="css/main.css" rel="stylesheet" />
+<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css' />
 <title>Edels Musikstube</title>
 </head>
 <body>
+
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<a class="brand" href="#">Edel´s Musikstube</a>
+			<ul class="nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Interessantes</a></li>
+				<li><a href="#">Über mich</a></li>
+			</ul>
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="page-header">
-			<h1>
-				442 <small>Intervallübungen</small>
-			</h1>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2" style="background-color: lightgrey">
+				<h3>Übungen</h3>
+				<br>
+				<ul>
+					<li><a href="iname.html">Intervalle Bezeichnungen</a></li>
+					<li><a href="inotenbild.html">Intervalle nach Notenbild</a></li>
+					<li><a href="igehoer.html">Intervalle nach Gehör</a></li>
+
+				</ul>
+			</div>
+			<div class="span10">
+				<!--Body content-->
+				<div class="page-header">
+					<img src="http://cdn2.freepik.com/image/th/2971043.jpg" />
+					<h1 class="h1-position">Intervallübungen</h1>
+				</div>
+				<div>
+					<h2>Intervalle nach Notenbild</h2>
+					<div>
+						<p>Wir gehen in dieser Übung stets von der C-Dur-Tonleiter aus. Es gibt also keine Vorzeichen.</p>
+						<div class="commands">Klicken Sie hier, um mit den Übungen zu beginnen.</div>
+					</div>
+					<h2>Intervalle nach Gehör</h2>
+					<div>
+						<p>Wir gehen in dieser Übung stets von der C-Dur-Tonleiter aus. Es gibt also keine Vorzeichen.</p>
+						<div class="commands">Klicken Sie hier, um mit den Übungen zu beginnen.</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<script src="lib/jquery.js"></script>
 	<script src="lib/underscore.js"></script>
 	<script src="js/app.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			init();
