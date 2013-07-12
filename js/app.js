@@ -40,15 +40,16 @@ var fragestellung = function() {
 };
 
 var pruefeAntwort = function() {
-	var nutzerAntwort = $(".intervalname").val();
-	if (nutzerAntwort === "Prime") {
-		alert("Das ist richtig. Gut gemacht!");
-	    }
-	else {
+
+	$(".intervalname").change(function() {
+		var nutzerAntwort = $(".intervalname").val();
+		if (nutzerAntwort === "Prime") {
+			alert("Das ist richtig. Gut gemacht!");
+		} else {
 			alert("Schade. Versuchen Sie es noch einmal...");
 		}
-		
-		
+	});
+
 };
 
 $(document).ready(whenReady);
