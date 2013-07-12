@@ -11,32 +11,75 @@
 <title>iname</title>
 </head>
 <body>
-
-	<div class="navbar navbar-fixed-top">
+	<div class="header">
+		<h1 style="margin-bottom: 0px; text-align: center&amp;amp;"index.html">
+			<img src="http://cdn2.freepik.com/image/th/2971043.jpg" /></a>Edel´s Musikstube
+		</h1>
+	</div>
+	<div class="navbar">
 		<div class="navbar-inner">
 			<a class="brand" href="index.html">Edel´s Musikstube</a>
 			<ul class="nav">
-				<li class="active"><a href="index.html">Home</a></li>
+				<li class="active"><a href="index.html">Startseite</a></li>
 				<li><a href="#">Interessantes</a></li>
 				<li><a href="#">Über mich</a></li>
 			</ul>
 		</div>
 	</div>
 
-	<h1>Intervalle nach Namen</h1>
-	<h2>Intervallnamen</h2>
-	<div>
-		<p>Wir gehen in dieser Übung stets von der C-Dur-Tonleiter aus. Es gibt also keine Vorzeichen.</p>
-		<div class="commands">Klicken Sie hier, um mit den Übungen zu beginnen.</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span3">
+				<!--Sidebar content-->
+
+
+				<div class="well">
+					<ul class="nav nav-list">
+						<li class="nav-header">Anfänger</li>
+						<li class="active"><a href="iname.html">Intervalle nach Namen</a></li>
+						<li><a href="inotenbild.html">Intervalle nach Notenbild</a></li>
+						<li><a href="igehoer.html">Intervalle nach Gehör</a></li>
+						<li class="nav-header">Fortgeschrittene</li>
+						<li><a href="#">Übung 1</a></li>
+						<li><a href="#">Übung 2</a></li>
+						<li><a href="#">Übung 3</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="span9">
+				<!--Body content-->
+				<h1>Intervalle nach Namen</h1>
+				<div>
+					<p>Wir gehen in dieser Übung stets von der C-Dur-Tonleiter aus. Es gibt also keine Vorzeichen. In dieser Übung bewegen wir uns vom c´
+						(eingestrichenes C bis zum c'' (zweigestrichenes C).</p>
+					<div class=" btn btn-primary commands">Klicken Sie hier, um alle Intervalle auf einmal zu üben.</div>
+					<br> <br>
+					<form>
+						<fieldset>
+							<legend>Erste Übung</legend>
+							<div class=" btn btn-primary erstesIntervall">Erstes Intervall</div>
+							<div class="frage">Wie heißt das Intervall von c' nach c'?</div>
+							<label>Geben Sie hier den Namen des Intervalls ein:</label> <input class="intervalname" type="text" name="intervallname" placeholder="Intervallname">
+							<span class="help-block">Schreiben Sie die Namen als einzelnes Wort. Achtung: vergessen Sie nicht das "e" am Ende bei "Prime",
+								"Sekunde", "Septime" usw.!</span> <label class="checkbox"> </label>
+							<button type="submit" class="btn">Prüfen</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
+
+
 </body>
 <script src="lib/jquery.js"></script>
-	<script src="lib/underscore.js"></script>
-	<script src="js/app.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			init();
-		});
-	</script>
+<script src="lib/underscore.js"></script>
+<script src="js/app.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		init();
+	});
+</script>
 </html>

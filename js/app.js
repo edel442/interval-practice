@@ -28,11 +28,27 @@ var onCommandClick = function() {
 
 var whenReady = function() {
 	$(".commands").click(onCommandClick);
-	$('.accordion').accordion({
-		collapsible : true,
-		heightStyle: 'fill'
-	});
+	$(".erstesIntervall").click(fragestellung);
+};
+
+var erstesIntervall = function() {
+	$("legend div").click(fragestellung);
+};
+
+var fragestellung = function() {
+	$(".frage").fadeIn(pruefeAntwort);
+};
+
+var pruefeAntwort = function() {
+	var nutzerAntwort = $(".intervalname").val();
+	if (nutzerAntwort === "Prime") {
+		alert("Das ist richtig. Gut gemacht!");
+	    }
+	else {
+			alert("Schade. Versuchen Sie es noch einmal...");
+		}
+		
+		
 };
 
 $(document).ready(whenReady);
-
