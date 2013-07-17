@@ -56,8 +56,10 @@ var pruefeAntwort = function() {
 		var nutzerAntwort = $(".intervalname").val();
 		if (nutzerAntwort === qas[aktuelleFragennummer].antwort) {
 			$(".richtigeAntwort").show();
+			$(".weiter").click(function() {
 			aktuelleFragennummer++;
 			fragestellung();
+			});
 			
 			
 			
