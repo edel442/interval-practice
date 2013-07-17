@@ -29,27 +29,81 @@ var onCommandClick = function() {
 var whenReady = function() {
 	$(".commands").click(onCommandClick);
 	$(".erstesIntervall").click(fragestellung);
+	$(".weiteresIntervall").click(fragestellung);
+	pruefeAntwort();
 };
 
 var erstesIntervall = function() {
 	$("legend div").click(fragestellung);
 };
 
+
+
 var fragestellung = function() {
-	$(".frage").fadeIn(pruefeAntwort);
+	$(".frage").text("Wie heißt das Intervall von " + qas[aktuelleFragennummer].frage).show();
+	$(".counter").text("Frage " + qas[aktuelleFragennummer].nummer + " von " + qas.length).show();
+	$(".intervalname").focus();
+	
+
 };
+
+
+
 
 var pruefeAntwort = function() {
 
 	$(".intervalname").change(function() {
 		var nutzerAntwort = $(".intervalname").val();
-		if (nutzerAntwort === "Prime") {
-			alert("Das ist richtig. Gut gemacht!");
+		if (nutzerAntwort === qas[aktuelleFragennummer].antwort) {
+			$(".richtigeAntwort").show();
+			aktuelleFragennummer++;
+			fragestellung();
+			
+			
+			
+			$(".falscheAntwort").hide();
 		} else {
-			alert("Schade. Versuchen Sie es noch einmal...");
+			$(".falscheAntwort").show();
+			$(".richtigeAntwort").hide();
 		}
 	});
 
 };
+
+var aktuelleFragennummer = 0;
+
+var qas = [ {
+	frage : "c' nach c'?",
+	antwort : "Prime",
+	nummer : 1
+}, {
+	frage : "c' nach d'?",
+	antwort : "Sekunde",
+	nummer : 2
+}, {
+	frage : "c' nach e'?",
+	antwort : "Terz",
+	nummer : 3
+}, {
+	frage : "c' nach f'?",
+	antwort : "Quarte",
+	nummer : 4
+}, {
+	frage : "c' nach g'?",
+	antwort : "Quinte",
+	nummer : 5
+}, {
+	frage : "c' nach h'?",
+	antwort : "Sexte",
+	nummer : 6
+}, {
+	frage : "c' nach a'?",
+	antwort : "Septime",
+	nummer : 7
+}, {
+	frage : "c' nach c''?",
+	antwort : "Oktave",
+	nummer : 8
+}, ];
 
 $(document).ready(whenReady);

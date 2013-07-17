@@ -13,41 +13,66 @@
 <body>
 
 
-	<!--Body content-->
+	<!--BODY content-->
 	<div class="header">
 		<h1 style="margin-bottom: 0px">
 			<a href="index.html"><img src="http://cdn2.freepik.com/image/th/2971043.jpg" /></a> Edel´s Musikstube
 		</h1>
 	</div>
 
+	<!-- NAVBAR -->
 	<div class="navbar">
-		<div class="navbar-inner">
+		<div class="navbar-inner" style="padding-left: 0px;">
 			<ul class="nav">
-				<li class="active"><a href="index.html">Startseite</a></li>
-				<li><a href="#">Allgemeines</a></li>
-				<li><a href="#">Über mich</a></li>
+				<li><a href="index.html">Startseite</a></li>
+				<li><a href="#">Theorie</a></li>
+
+				<!-- dropdown-menu für Intervallübungen -->
+				<li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Intervallübungen</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="iname.html">Nach Namen</a></li>
+						<li><a href="igehoer.html">Nach Gehoer</a></li>
+						<li><a href="inotenbild.html">Nach Notenbild</a></li>
+					</ul>
 			</ul>
 		</div>
 	</div>
-	<div class="content">
-		<h4>Diese Seite gibt es für alle Menschen, die einfache Übungen zu Intervallen machen möchten.</h4>
-		<h4>Dafür bieten wir drei verschiedene Praxis-Übungen an, und zwar</h4>
-		<ul>
-			<li>Intervalle nach Namen</li>
-			<li>Intervalle nach Notenbild</li>
-			<li>Intervalle nach Gehör</li>
-		</ul>
-		<br>
-		<p>Zu allen Übungen gibt es eine Lösungsseite.</p>
 
-		<h3>Achtung: für alle Übungen gilt zunächst die C-Dur-Tonleiter!</h3>
-		<br> <br>
-		<p>
-			...und hier geht´s weiter zu den Übungen: <a href="iname.html" class="btn btn-large btn-primary">Start</a>
-		</p>
+
+	<!-- INHALT -->
+	<div class="row-fluid">
+		<div class="span6">
+		<h5>Warum gibt es diese Seite?</h5>
+			<p>Zugegeben: Musiktheorie mit Intervallen und Übungsteilen gibt es zu Hauf im Netz, darunter viele sehr gute Seiten.
+			Mir persönlich fehlen jedoch Übungen, die ich direkt am Bildschirm machen kann. Kein Ausdrucken, kein Umblättern.</p>
+			<p>
+			Also habe ich angefangen, diese Seite nur für mich alleine zu erstellen. Sollte sonst noch jemand Spaß daran haben: umso besser!
+			</p><br>
+			<h5>Bevor ihr anfangt...</h5>
+			<p>lohnt es sich, ein paar Dinge zu wissen. In den ersten Übungen gehen wir immer von der ganz normalen C-Dur-Tonleiter aus. Der Stammton ist also immer das eingestrichene c'.</p>
+			<p>Ansonsten gibt es in jeder Übung eine kurze Einleitung, manchmal sind Tipps dabei.<p>
+			<p>Die Frage bzw. Aufgabe selbst erscheint mit Beginn der Übung - meistens durch einen Klick.</p>
+		</div>
+		<div class="span4 offset1">
+		<h5>Der Übungsaufbau</h5>
+			<p>Die Übungen sind in drei Teile gegliedert, und zwar sind das</p>
+			<ul>
+				<li>Intervalle nach Namen</li>
+				<li>Intervalle nach Notenbild</li>
+				<li>Intervalle nach Gehör</li>
+			</ul>
+		<p>Wir fangen ganz von vorn an, Schritt für Schritt.</p>
+		<br><br>
+		<div class="well">
+			...und hier geht´s weiter zu den Übungen: <br><a href="iname.html" class="btn btn-large btn-primary">Start</a>
+		</div>
+		</div>
+
 	</div>
+		<div class="well">Achtung: für alle Übungen gilt zunächst die C-Dur-Tonleiter!</div>
 
 	<script src="lib/jquery.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 	<script src="lib/underscore.js"></script>
 	<script src="js/app.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>

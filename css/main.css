@@ -1,12 +1,15 @@
 .header {
 	background-color: #E3BDFC;
 	font-family: 'Tangerine', 'OFL Sorts Mill Goudy TT', Arial, sans-serif;
+	border-radius: 5px;
+	border: 1px solid #d4d4d4;
 	
 }
 
 .header img {
-	margin-right: 20px;
-	opacity: 1px;
+	margin-right: 40px;
+	padding: 10px;
+	border-radius: 15px;
 }
 
 .header h1 {
@@ -19,16 +22,42 @@ body {
 	margin: auto;
 	width: 1000px;
 	background-color: #fefefe;
+		}
+		
+.tonleiter {
+	height: 80px;
+	width: 400px;
+	
 }
 
-.frage {
+.frage, .richtigeAntwort, .falscheAntwort {
 	font-size: 20px;
 	color: blue;
 	margin: 20px 0px;
 	background-color: lightgreen;
+	border-radius: 5px;
 	display: none;
 }
 
 .intervalname {
 	background: red;
 }
+
+.erstesIntervall, .weiteresIntervall {
+	margin-bottom: 40px;
+}
+
+.commands {
+	margin-bottom: 40px;
+	float: right; 
+}
+
+.counter {
+	display: none;
+	background-color: blue;
+	color: white; 
+}
+
+
+
+

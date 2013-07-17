@@ -12,58 +12,61 @@
 </head>
 <body>
 	<div class="header">
-		<h1 style="margin-bottom: 0px; text-align: center&amp;amp;"index.html">
-			<img src="http://cdn2.freepik.com/image/th/2971043.jpg" /></a>Edel´s Musikstube
+		<h1 style="margin-bottom: 0px">
+			<a href="index.html"><img src="http://cdn2.freepik.com/image/th/2971043.jpg" /></a> Edel´s Musikstube
 		</h1>
 	</div>
+
 	<div class="navbar">
-		<div class="navbar-inner">
-			<a class="brand" href="index.html">Edel´s Musikstube</a>
+		<div class="navbar-inner" style="padding-left: 0px;">
 			<ul class="nav">
-				<li class="active"><a href="index.html">Startseite</a></li>
-				<li><a href="#">Interessantes</a></li>
-				<li><a href="#">Über mich</a></li>
+				<li><a href="index.html">Startseite</a></li>
+				<li><a href="#">Theorie</a></li>
+
+				<!-- dropdown-menu für Intervallübungen -->
+				<li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Intervallübungen</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="iname.html">Nach Namen</a></li>
+						<li><a href="igehoer.html">Nach Gehoer</a></li>
+						<li><a href="inotenbild.html">Nach Notenbild</a></li>
+					</ul>
 			</ul>
 		</div>
 	</div>
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="padding-left: 0px;">
 		<div class="row-fluid">
-			<div class="span3">
-				<!--Sidebar content-->
-
-
-				<div class="well">
-					<ul class="nav nav-list">
-						<li class="nav-header">Anfänger</li>
-						<li class="active"><a href="iname.html">Intervalle nach Namen</a></li>
-						<li><a href="inotenbild.html">Intervalle nach Notenbild</a></li>
-						<li><a href="igehoer.html">Intervalle nach Gehör</a></li>
-						<li class="nav-header">Fortgeschrittene</li>
-						<li><a href="#">Übung 1</a></li>
-						<li><a href="#">Übung 2</a></li>
-						<li><a href="#">Übung 3</a></li>
-
-					</ul>
-				</div>
-			</div>
-			<div class="span9">
+			<div class="span12">
 				<!--Body content-->
-				<h1>Intervalle nach Namen</h1>
+				<h2>Intervalle nach Namen</h2>
+				<hr>
 				<div>
-					<p>Wir gehen in dieser Übung stets von der C-Dur-Tonleiter aus. Es gibt also keine Vorzeichen. In dieser Übung bewegen wir uns vom c´
-						(eingestrichenes C bis zum c'' (zweigestrichenes C).</p>
-					<div class=" btn btn-primary commands">Klicken Sie hier, um alle Intervalle auf einmal zu üben.</div>
-					<br> <br>
+					<div class="row-fluid">
+						<div class="span6">
+							Wir gehen in dieser Übung stets von der C-Dur-Tonleiter aus. <br>In dieser Übung bewegen wir uns vom c´ (eingestrichenes C bis zum
+							c'' (zweigestrichenes C). <br>
+						</div>
+						<div class="span5 offset1">
+							<img class="tonleiter" src="img/Tonleiter.PNG">
+						</div>
+						<br> <br>
+					</div>
 					<form>
 						<fieldset>
-							<legend>Erste Übung</legend>
-							<div class=" btn btn-primary erstesIntervall">Erstes Intervall</div>
-							<div class="frage">Wie heißt das Intervall von c' nach c'?</div>
-							<label>Geben Sie hier den Namen des Intervalls ein:</label> <input class="intervalname" type="text" name="intervallname" placeholder="Intervallname">
-							<span class="help-block">Schreiben Sie die Namen als einzelnes Wort. Achtung: vergessen Sie nicht das "e" am Ende bei "Prime",
-								"Sekunde", "Septime" usw.!</span> <label class="checkbox"> </label>
-							<button type="submit" class="btn">Weiter</button>
+							<legend>Erste Lektion</legend>
+							<div class=" btn erstesIntervall">Erstes Intervall</div>
+							<div class="btn weiteresIntervall">Nächstes Intervall</div>
+							<div class="btn commands">Klicken Sie hier, um alle Intervalle auf einmal zu üben.</div>
+							<div class="well">
+								<div class="counter"></div>
+								<div class="frage"></div>
+								<label>Geben Sie hier den Namen des Intervalls ein und gehen Sie danach mit TAB weiter:</label> <input class="intervalname" type="text"
+									name="intervallname" placeholder="Intervallname"> <span class="help-block">Schreiben Sie die Namen als einzelnes Wort.
+									Achtung: vergessen Sie nicht das "e" am Ende bei "Prime", "Sekunde", "Septime" usw.!</span> <label class="checkbox"> </label>
+								<div class="richtigeAntwort">Das ist richtig!</div>
+								<div class="falscheAntwort">Das war leider nicht richtig. Versuchen Sie es noch einmal.</div>
+							</div>
+
 						</fieldset>
 					</form>
 				</div>
@@ -72,8 +75,10 @@
 	</div>
 
 
+
 </body>
 <script src="lib/jquery.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="lib/underscore.js"></script>
 <script src="js/app.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
