@@ -26,86 +26,90 @@ var onCommandClick = function() {
 	}
 };
 
-var whenReady = function() {
+
+//alle Eventhandler initialisieren ("der Mannschaft ihre Aufgaben geben")
+var initialisieren = function() {
 	$(".commands").click(onCommandClick);
 	$(".erstesIntervall").click(fragestellung);
 	$(".weiteresIntervall").click(fragestellung);
-	pruefeAntwort();
+	$(".weiter").click(geheZurNaechstenAufgabe);
+	$(".intervalname").change(pruefeAntwort);
 };
 
-var erstesIntervall = function() {
+var lektionStarten = function() {
 	$("legend div").click(fragestellung);
 };
 
-
-
 var fragestellung = function() {
-	$(".frage").text("Wie heißt das Intervall von " + qas[aktuelleFragennummer].frage).show();
-	$(".counter").text("Frage " + qas[aktuelleFragennummer].nummer + " von " + qas.length).show();
+	$(".frage").text(
+			"Wie heißt das Intervall von " + qas[aktuelleFragennummer].frage)
+			.show();
+	$(".counter").text(
+			"Frage " + qas[aktuelleFragennummer].nummer + " von " + qas.length)
+			.show();
 	$(".intervalname").focus();
-	
 
 };
 
-
-
-
 var pruefeAntwort = function() {
 
-	$(".intervalname").change(function() {
-		var nutzerAntwort = $(".intervalname").val();
+		var nutzerAntwort = $(".intervalname").val().toLowerCase();
+		
 		if (nutzerAntwort === qas[aktuelleFragennummer].antwort) {
 			$(".richtigeAntwort").show();
-			$(".weiter").click(function() {
-			aktuelleFragennummer++;
-			fragestellung();
-			});
-			
-			
-			
+
 			$(".falscheAntwort").hide();
 		} else {
 			$(".falscheAntwort").show();
 			$(".richtigeAntwort").hide();
 		}
-	});
 
+};
+
+var feldLeeren = function(){
+	$(".intervalname").val('');
+};
+
+var geheZurNaechstenAufgabe = function() {
+	aktuelleFragennummer++;
+	fragestellung();
+	feldLeeren();
 };
 
 var aktuelleFragennummer = 0;
 
 var qas = [ {
 	frage : "c' nach c'?",
-	antwort : "Prime",
+	antwort : "prime",
 	nummer : 1
 }, {
 	frage : "c' nach d'?",
-	antwort : "Sekunde",
+	antwort : "sekunde",
 	nummer : 2
 }, {
 	frage : "c' nach e'?",
-	antwort : "Terz",
+	antwort : "terz",
 	nummer : 3
 }, {
 	frage : "c' nach f'?",
-	antwort : "Quarte",
+	antwort : "quarte",
 	nummer : 4
 }, {
 	frage : "c' nach g'?",
-	antwort : "Quinte",
+	antwort : "quinte",
 	nummer : 5
 }, {
-	frage : "c' nach h'?",
-	antwort : "Sexte",
+	frage : "c' nach a'?",
+	antwort : "sexte",
 	nummer : 6
 }, {
-	frage : "c' nach a'?",
-	antwort : "Septime",
+	frage : "c' nach h'?",
+	antwort : "septime",
 	nummer : 7
 }, {
 	frage : "c' nach c''?",
-	antwort : "Oktave",
+	antwort : "oktave",
 	nummer : 8
 }, ];
 
-$(document).ready(whenReady);
+$(document).ready(initialisieren);

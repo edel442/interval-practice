@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT|Yanone+Kaffeesatz|Tangerine' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/bootstrap-responsive.css" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet" />
+<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css' />
+<title>iname</title>
+</head>
+<body>
+
+	<div class="header">
+		<h1 style="margin-bottom: 0px">
+			<a href="index.html"><img src="http://cdn2.freepik.com/image/th/2971043.jpg" /></a> Edel´s Musikstube
+		</h1>
+	</div>
+
+	<div class="navbar">
+		<div class="navbar-inner" style="padding-left: 0px;">
+			<ul class="nav">
+				<li><a href="index.html">Startseite</a></li>
+				<li><a href="#">Theorie</a></li>
+
+				<!-- dropdown-menu für Intervallübungen -->
+				<li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Intervallübungen</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="iname.html">Nach Namen</a></li>
+						<li><a href="igehoer.html">Nach Gehoer</a></li>
+						<li><a href="inotenbild.html">Nach Notenbild</a></li>
+					</ul>
+			</ul>
+		</div>
+	</div>
+
+	<h1>Intervalle nach Gehör</h1>
+	<h2>Intervall hören und benennen</h2>
+	<div>
+		<p>Wir gehen in dieser Übung stets von der C-Dur-Tonleiter aus. Es gibt also keine Vorzeichen.</p>
+		<div class="commands">Klicken Sie hier, um mit den Übungen zu beginnen.</div>
+	</div>
+</body>
+<!-- Script-Dateien ----------------------------------------------------------->
+<script src="lib/jquery.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="js/app.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			init();
+		});
+	</script>
+</html>
