@@ -28,17 +28,17 @@ var onCommandClick = function() {
 
 
 //alle Eventhandler initialisieren ("der Mannschaft ihre Aufgaben geben")
+//wird unten bei $(document).ready() als Parameter übergeben
+
 var initialisieren = function() {
 	$(".commands").click(onCommandClick);
-	$(".erstesIntervall").click(fragestellung);
-	$(".weiteresIntervall").click(fragestellung);
 	$(".weiter").click(geheZurNaechstenAufgabe);
-	$(".intervalname").change(pruefeAntwort);
+	$(".intervalname").change();
+	$(".pruefe").click(pruefeAntwort);
+	fragestellung();
+	
 };
 
-var lektionStarten = function() {
-	$("legend div").click(fragestellung);
-};
 
 var fragestellung = function() {
 	$(".frage").text(
