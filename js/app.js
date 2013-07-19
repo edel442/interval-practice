@@ -6,7 +6,6 @@
 // wird unten bei $(document).ready() als Parameter übergeben
 
 var initialisieren = function() {
-	$(".commands").click(onCommandClick);
 	$(".weiter").click(geheZurNaechstenAufgabe);
 	$(".intervalname").change();
 	$(".pruefe").click(pruefeAntwort);
@@ -56,7 +55,7 @@ var feldLeeren = function() {
 var updateStats = function(){
 	$(".counter").text("Frage " + (aktuelleFragennummer + 1) + " von " + qas.length).show();
 	
-	var percent = (aktuelleFragennummer + 1) / qas.length * 100;
+	var percent = (aktuelleFragennummer) / qas.length * 100;
 	$(".bar").css("width", percent + "%");
 	
 };
