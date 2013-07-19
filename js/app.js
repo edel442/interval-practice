@@ -8,7 +8,9 @@ var initialisieren = function() {
 	$(".intervalname").change();
 	$(".pruefe").click(pruefeAntwort);
 	$("form").submit(disableSubmit);
-	$("#myModal").modal({show: false});
+	$("#myModal").modal({
+		"show" : false
+	});
 	fragestellung();
 	updateStats();
 
@@ -30,30 +32,22 @@ var pruefeAntwort = function() {
 
 	var nutzerAntwort = $(".intervalname").val().toLowerCase();
 
-	
-	if (nutzerAntwort === qas[aktuelleFragennummer].antwort && nutzerAntwort === "Terz") {
+	if (nutzerAntwort === qas[aktuelleFragennummer].antwort) {
 		$(".richtigeAntwort").show();
 		$(".falscheAntwort").hide();
 		$(".pruefe").hide();
 		var percent = (aktuelleFragennummer + 1) / qas.length * 100;
 		$(".bar").css("width", percent + "%");
-		$("#myModal").modal(show);
-	}
 
-	
-	
-	else if (nutzerAntwort === qas[aktuelleFragennummer].antwort) {
-		$(".richtigeAntwort").show();
-		$(".falscheAntwort").hide();
-		$(".weiter").show();
-		$(".pruefe").hide();
-		var percent = (aktuelleFragennummer + 1) / qas.length * 100;
-		$(".bar").css("width", percent + "%");
-	}
+		if (nutzerAntwort === "Terz") {
+			$("#myModal").modal("show");
+		}
+		else {
+			$(".weiter").show();
+			
+		}
 
-	
-
-	else {
+	} else {
 		$(".falscheAntwort").show();
 		$(".richtigeAntwort").hide();
 	}
