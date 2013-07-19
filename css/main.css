@@ -30,7 +30,7 @@ body {
 	
 }
 
-.frage, .richtigeAntwort, .falscheAntwort {
+.frage {
 	font-size: 20px;
 	color: blue;
 	margin: 20px 0px;
@@ -38,6 +38,8 @@ body {
 	border-radius: 5px;
 	display: none;
 }
+
+
 
 .intervalname {
 	background: red;
@@ -55,7 +57,9 @@ body {
 	color: white; 
 }
 
-
+.richtigeAntwort, .falscheAntwort, .weiter {
+	display: none;
+}
 
 
 
