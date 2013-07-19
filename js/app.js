@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // alle Eventhandler initialisieren ("der Mannschaft ihre Aufgaben geben")
 // wird unten bei $(document).ready() als Parameter übergeben
 
@@ -10,11 +8,11 @@ var initialisieren = function() {
 	$(".intervalname").change();
 	$(".pruefe").click(pruefeAntwort);
 	$("form").submit(disableSubmit);
+	$("#myModal").modal({show: false});
 	fragestellung();
 	updateStats();
 
 };
-
 
 var disableSubmit = function() {
 	return false;
@@ -25,7 +23,6 @@ var fragestellung = function() {
 	$(".intervalname").focus();
 	$(".pruefe").show();
 	$(".weiter").hide();
-	
 
 };
 
@@ -33,33 +30,42 @@ var pruefeAntwort = function() {
 
 	var nutzerAntwort = $(".intervalname").val().toLowerCase();
 
-	if (nutzerAntwort === qas[aktuelleFragennummer].antwort) {
+	
+	if (nutzerAntwort === qas[aktuelleFragennummer].antwort && nutzerAntwort === "Terz") {
+		$(".richtigeAntwort").show();
+		$(".falscheAntwort").hide();
+		$(".pruefe").hide();
+		var percent = (aktuelleFragennummer + 1) / qas.length * 100;
+		$(".bar").css("width", percent + "%");
+		$("#myModal").modal(show);
+	}
+
+	
+	
+	else if (nutzerAntwort === qas[aktuelleFragennummer].antwort) {
 		$(".richtigeAntwort").show();
 		$(".falscheAntwort").hide();
 		$(".weiter").show();
 		$(".pruefe").hide();
 		var percent = (aktuelleFragennummer + 1) / qas.length * 100;
 		$(".bar").css("width", percent + "%");
-		
-	} else {
+	}
+
+	
+
+	else {
 		$(".falscheAntwort").show();
 		$(".richtigeAntwort").hide();
 	}
-
 };
 
 var feldLeeren = function() {
 	$(".intervalname").val('');
 };
 
-
-
-var updateStats = function(){
+var updateStats = function() {
 	$(".counter").text("Frage " + (aktuelleFragennummer + 1) + " von " + qas.length).show();
-	
-	
 };
-
 
 var geheZurNaechstenAufgabe = function() {
 	aktuelleFragennummer++;
@@ -95,5 +101,3 @@ var qas = [ {
 	frage : "c' nach c''?",
 	antwort : "oktave",
 }, ];
-
-
