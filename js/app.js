@@ -38,6 +38,8 @@ var pruefeAntwort = function() {
 		$(".falscheAntwort").hide();
 		$(".weiter").show();
 		$(".pruefe").hide();
+		var percent = (aktuelleFragennummer + 1) / qas.length * 100;
+		$(".bar").css("width", percent + "%");
 		
 	} else {
 		$(".falscheAntwort").show();
@@ -55,8 +57,6 @@ var feldLeeren = function() {
 var updateStats = function(){
 	$(".counter").text("Frage " + (aktuelleFragennummer + 1) + " von " + qas.length).show();
 	
-	var percent = (aktuelleFragennummer) / qas.length * 100;
-	$(".bar").css("width", percent + "%");
 	
 };
 
