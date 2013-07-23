@@ -32,9 +32,10 @@ body {
 
 .frage {
 	font-size: 20px;
-	color: blue;
-	margin: 20px 0px;
-	background-color: lightgreen;
+	margin: 40px 0px;
+	padding: 5px;
+	background-color: #eee;
+	border: 1px solid #ddd;
 	border-radius: 5px;
 	display: none;
 }
@@ -43,6 +44,7 @@ body {
 
 .intervalname {
 	background: red;
+	float: left;
 }
 
 
@@ -53,12 +55,29 @@ body {
 
 .counter {
 	display: none;
-	background-color: blue;
-	color: white; 
+	background-color: #eee;
+	width: 100px;
+	padding-left: 5px;
+	border-radius: 5px;
 }
 
-.richtigeAntwort, .falscheAntwort, .weiter {
+.richtigeAntwort, .falscheAntwort, .keineAntwort, .weiter {
 	display: none;
+}
+
+
+.info {
+	height: 20px;
+	width: 20px;
+	background-color: #3E86F7;
+	border-radius: 5px;
+	color: white;
+	font-size: 30px;
+	font-family: serif;
+	text-align: center;
+	padding: 5px;  
+	display: inline-block;
+	margin-left: 40px; 
 }
 
 

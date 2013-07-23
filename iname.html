@@ -11,17 +11,13 @@
 <title>iname</title>
 </head>
 <body>
-	<div class="header">
-		<h1 style="margin-bottom: 0px">
-			<a href="index.html"><img src="http://cdn2.freepik.com/image/th/2971043.jpg" /></a> Edel´s Musikstube
-		</h1>
-	</div>
 
 	<div class="navbar">
 		<div class="navbar-inner" style="padding-left: 0px;">
+			<a class="brand" href="index.html" style="padding-right: 80px;">Edels Musikstube</a>
 			<ul class="nav">
-				<li><a href="index.html">Startseite</a></li>
-				<li><a href="#">Theorie</a></li>
+				<li><a href="#">Info</a></li>
+				<li><a href="#">Lektionen</a></li>
 
 				<!-- dropdown-menu für Intervallübungen -->
 				<li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Intervallübungen</a>
@@ -50,11 +46,15 @@
 									<div class="counter"></div>
 									<div class="frage"></div>
 									<label>Geben Sie hier den Namen des Intervalls ein:</label> <input class="intervalname" type="text" autocomplete="off"
-										name="intervallname" placeholder="Intervallname"> <label class="checkbox"> </label>
+										name="intervallname" placeholder="Intervallname">
+									<div class="info" title="Tipp für dich" data-content="So sieht das Notenbild aus: (Bild)" data-placement="right">i</div>
+									<label class="checkbox"> </label>
+
 									<div class="richtigeAntwort alert alert-success">Das ist richtig!</div>
-									<div class="falscheAntwort alert alert-error">Das war leider nicht richtig. Versuchen Sie es noch einmal.</div>
-									<button class="btn btn-primary pruefe">Antwort prüfen</button>
-									<button class="btn btn-success weiter">Nächste Frage</button>
+									<div class="falscheAntwort alert alert-error"></div>
+									<div class="keineAntwort alert alert-error"></div>
+									<button class="btn pruefe">Antwort prüfen</button>
+									<button class="btn weiter">Nächste Frage</button>
 								</fieldset>
 							</form>
 
@@ -70,12 +70,11 @@
 								</div>
 								<div class="modal-footer">
 									<button class="btn" data-dismiss="modal" aria-hidden="true">Fenster schließen</button>
-									<button class="btn btn-primary">Save changes</button>
 								</div>
 							</div>
 
 						</div>
-						<div class="span5 offset1">Fortschritt in der ersten Lektion:</div>
+						<div class="span5 offset1">Gesamtfortschritt erste Lektion:</div>
 						<div class="span5 offset1 progress">
 							<div class="bar"></div>
 						</div>

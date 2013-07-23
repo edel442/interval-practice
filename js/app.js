@@ -13,9 +13,11 @@ var initialisieren = function() {
 	});
 	fragestellung();
 	updateStats();
+	$(".info").click(zeigePopover).popover();
 
 };
 
+// verhindert, dass durch enter das dokument neu geladen wird
 var disableSubmit = function() {
 	return false;
 };
@@ -28,6 +30,10 @@ var fragestellung = function() {
 
 };
 
+var zeigePopover = function() {
+	$(".tip").show();
+};
+
 var pruefeAntwort = function() {
 
 	var nutzerAntwort = $(".intervalname").val().toLowerCase();
@@ -36,24 +42,32 @@ var pruefeAntwort = function() {
 		$(".richtigeAntwort").show();
 		$(".falscheAntwort").hide();
 		$(".pruefe").hide();
+		$(".keineAntwort").hide();
 		var percent = (aktuelleFragennummer + 1) / qas.length * 100;
 		$(".bar").css("width", percent + "%");
 
-		if (nutzerAntwort === "Terz") {
+		if (nutzerAntwort === "oktave") {
 			$("#myModal").modal("show");
-		}
-		else {
+		} else {
 			$(".weiter").show();
-			
 		}
+	}
+
+		else if (nutzerAntwort === "") {
+			$(".keineAntwort").text("Sie haben keine Eingabe gemacht. Bitte geben Sie den Intervallnamen ein.").show();
+		
 
 	} else {
-		$(".falscheAntwort").show();
+		$(".falscheAntwort").html("Sie haben <strong>" + nutzerAntwort + "</strong> eingegeben. Das war leider nicht richtig. Versuchen Sie es noch einmal.")
+				.show();
 		$(".richtigeAntwort").hide();
+		$(".intervalname").focus();
+		feldLeeren();
 	}
 };
 
 var feldLeeren = function() {
+	$(".richtigeAntwort").hide();
 	$(".intervalname").val('');
 };
 
