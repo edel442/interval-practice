@@ -34,10 +34,12 @@ var fragestellung = function() {
 
 var zeigeTip = function() {
 	$(".tip").modal("show");
+	$(".loesung").show();
 };
 
 var zeigeLoesung = function() {
-	$(".loesung img").modal("show");
+	$(".loesungsbild").modal("show");
+	$(".loesung").hide();
 };
 
 var pruefeAntwort = function() {

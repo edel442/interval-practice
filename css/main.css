@@ -95,12 +95,13 @@ body {
 	text-align: center;
 	padding: 5px;  
 	display: inline-block;
-	margin-left: 120px; 
+	margin-top: 40px;
 	
 }
 
-.loesung img {
+.loesungsbild {
 	display: none;
+	margin-top: 20px;
 	
 }
 
