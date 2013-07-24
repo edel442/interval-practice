@@ -13,7 +13,9 @@ var initialisieren = function() {
 	});
 	fragestellung();
 	updateStats();
-	$(".info").click(zeigePopover).popover();
+	$(".info").click(zeigeTip);
+	$(".loesung").click(zeigeLoesung);
+	
 
 };
 
@@ -30,8 +32,12 @@ var fragestellung = function() {
 
 };
 
-var zeigePopover = function() {
-	$(".tip").show();
+var zeigeTip = function() {
+	$(".tip").modal("show");
+};
+
+var zeigeLoesung = function() {
+	$(".loesung img").modal("show");
 };
 
 var pruefeAntwort = function() {
